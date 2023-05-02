@@ -2,6 +2,7 @@ import { RecipeDifficulty } from 'constants';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  position: relative;
   border: 1px solid ${p => p.theme.colors.black};
   border-radius: ${p => p.theme.radii.md};
 `;
@@ -33,14 +34,6 @@ export const DifficultyBadges = styled.div`
   padding: 4px;
 `;
 
-// export const Badge = styled.span`
-//   padding: 4px 8px;
-//   border-radius: ${p => p.theme.radii.sm};
-//   border: 1px solid ${p => p.theme.colors.black};
-//   background-color: ${p => (p.active ? 'red' : 'white')};
-//   color: ${p => (p.active ? 'white' : 'black')};
-// `;
-
 const getBadgeBgColor = p => {
   if (!p.active) {
     return p.theme.colors.white;
@@ -64,4 +57,12 @@ export const Badge = styled.span`
   border: 1px solid ${p => p.theme.colors.black};
   color: ${p => (p.active ? p.theme.colors.white : p.theme.colors.black)};
   background-color: ${getBadgeBgColor};
+`;
+
+export const Actions = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
 `;
