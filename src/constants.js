@@ -3,3 +3,5 @@ export const RecipeDifficulty = {
   medium: 'medium',
   hard: 'hard',
 };
+
+export const LOCALSTORAGE_KEY = 'recipes';
