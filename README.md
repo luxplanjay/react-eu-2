@@ -9,6 +9,7 @@
     - https://www.npmjs.com/package/react-spinners
 - Вынести информацию о собаке в компонент Dog
 - Добавить «скелет» вместо индикатора (DogSkeleton)
-- https://skeletonreact.com
+  - https://youtu.be/17NrbmgOuGw?t=1128
+  - https://skeletonreact.com
 - Добавить обработку ошибок
 - https://react-hot-toast.com

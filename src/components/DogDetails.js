@@ -1,4 +1,4 @@
-export const Dog = ({ dog: { breeds, url } }) => {
+export const DogDetails = ({ dog: { breeds, url } }) => {
   const { bred_for, name, temperament } = breeds[0];
 
   return (
