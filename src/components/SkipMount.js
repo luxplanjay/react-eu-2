@@ -4,6 +4,8 @@ export const SkipMount = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
+    if (searchTerm === '') return;
+
     console.log(`Fetch data with ${searchTerm}`);
   }, [searchTerm]);
 

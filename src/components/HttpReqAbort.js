@@ -14,20 +14,31 @@ export const HttpReqAbort = () => {
   );
 };
 
+// Strict mode (задваинвание http запроса при монтировании)
+// mount (http) > unmount (cancel http) > mount (http)
+
 const ChildComponent = () => {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
+    const controller = new AbortController();
+
     async function fetchData() {
       try {
         const url = 'https://jsonplaceholder.typicode.com/todos';
-        const response = await axios.get(url);
+        const response = await axios.get(url, {
+          signal: controller.signal,
+        });
         setTodos(prevTodos => [...prevTodos, ...response.data]);
       } catch (error) {
         console.log(error.message);
       }
     }
     fetchData();
+
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   return (

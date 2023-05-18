@@ -5,10 +5,13 @@ export const UseMemoExample = () => {
   const [b, setB] = useState(0);
   const [c, setC] = useState(0);
 
-  // console.log('Вычисляем value');
+  console.log('Вычисляем value');
   const value = a + b;
 
-  // console.log('Вычисляем memoizedValue');
+  const memoizedValue = useMemo(() => {
+    console.log('Вычисляем memoizedValue');
+    return a + b;
+  }, [a, b]);
 
   return (
     <div>
@@ -16,7 +19,7 @@ export const UseMemoExample = () => {
       <button onClick={() => setB(prev => prev + 1)}>update b: {b}</button>
       <button onClick={() => setC(prev => prev + 1)}>update c: {c}</button>
       <p>value: {value}</p>
-      {/* <p>memoizedValue: {memoizedValue}</p> */}
+      <p>memoizedValue: {memoizedValue}</p>
     </div>
   );
 };

@@ -1,8 +1,20 @@
+import { useRef } from 'react';
+
 export const RefExample = () => {
+  const formRef = useRef();
+
+  const handleScroll = () => {
+    const dims = formRef.current.getBoundingClientRect();
+    window.scrollTo({
+      top: dims.top,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       <div>
-        <button>Schedule a coaching session</button>
+        <button onClick={handleScroll}>Schedule a coaching session</button>
       </div>
 
       <div>
@@ -304,6 +316,7 @@ export const RefExample = () => {
       </div>
 
       <form
+        ref={formRef}
         style={{
           display: 'grid',
           width: 320,

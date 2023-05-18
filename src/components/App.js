@@ -9,9 +9,9 @@ export const App = () => {
     <>
       {/* <SkipMount /> */}
       {/* <RefExample /> */}
-      {/* <HttpReqAbort /> */}
-      {/* <HttpReqAbortOnEvent /> */}
       {/* <UseMemoExample /> */}
+      {/* <HttpReqAbort /> */}
+      <HttpReqAbortOnEvent />
     </>
   );
 };
