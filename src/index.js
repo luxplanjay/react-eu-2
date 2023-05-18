@@ -1,7 +1,7 @@
+import { App } from 'components/App';
+import { GlobalStyle } from 'components/GlobalStyle';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { App } from 'example-1/components/App';
-import { App } from 'example-2/components/App';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
@@ -22,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
+      <GlobalStyle />
     </ThemeProvider>
   </React.StrictMode>
 );
