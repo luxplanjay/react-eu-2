@@ -1,23 +1,18 @@
+import { createSlice } from '@reduxjs/toolkit';
+
 const initialState = {
   locale: 'uk',
 };
 
-export const profileReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'profile/changeLang':
-      return {
-        ...state,
-        locale: action.payload,
-      };
+const profileSlice = createSlice({
+  name: 'profile',
+  initialState,
+  reducers: {
+    changeLang(state, action) {
+      state.locale = action.payload;
+    },
+  },
+});
 
-    default:
-      return state;
-  }
-};
-
-export const changeLang = lang => {
-  return {
-    type: 'profile/changeLang',
-    payload: lang,
-  };
-};
+export const profileReducer = profileSlice.reducer;
+export const { changeLang } = profileSlice.actions;
