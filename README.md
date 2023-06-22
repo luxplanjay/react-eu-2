@@ -1,21 +1,57 @@
-# Steps
+# React Arc Finale
 
-```js
-// !!!REDUX PERSIST ЧТОБЫ СОХРАНЯЛО МАССИВ КОНТАКТОВ!!!
-const persistConfig = {
-  key: 'root',
-  storage,
-  whitelist: ['contacts'],
-};
+## Roadmaps
 
-const rootReducer = combineReducers({
-  contacts: contactsReducer,
-  filter: filterReducer,
-});
+https://roadmap.sh/
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+## YouTube
 
-export const store = configureStore({
-  reducer: persistedReducer,
-});
-```
+- https://www.youtube.com/@freecodecamp
+- https://www.youtube.com/@UlbiTV/featured
+- https://www.youtube.com/@YauhenKavalchuk/featured
+- https://www.youtube.com/@ArchakovBlog/videos
+- https://www.youtube.com/@ByteByteGo/featured
+
+## TypeScript
+
+- https://www.youtube.com/playlist?list=PLNkWIWHIRwMEm1FgiLjHqSky27x5rXvQa
+- https://www.youtube.com/watch?v=92qcfeWxtnY
+
+## Экосистема React
+
+- https://nextjs.org/
+- https://tanstack.com/query/v4
+  - https://youtu.be/4-SOv7eTfoQ
+  - https://youtu.be/Egg8jH0Yj14
+- https://react-hook-form.com/
+- https://storybook.js.org/
+- https://tailwindcss.com/
+
+### Библиотеки компонент
+
+- https://mui.com/
+- https://chakra-ui.com/
+
+### Redux Saga
+
+- https://youtube.com/playlist?list=PLNkWIWHIRwMFrVMaVMOYflo8R4QBk4vk0
+
+## Собеседование
+
+- https://www.youtube.com/playlist?list=PLNkWIWHIRwMFSLI9wBuHxuGI5lAZ7QNUg
+- https://dou.ua/lenta/articles/interview-questions-javascript-developer
+- https://github.com/sudheerj/reactjs-interview-questions
+- https://github.com/sudheerj/javascript-interview-questions
+
+### SOLID
+
+- https://youtu.be/TxZwqVTaCmA
+- https://youtu.be/A6wEkG4B38E
+
+## A11y
+
+- https://youtu.be/RoZLuvcbB5c
+
+## CI/CD
+
+- https://youtu.be/ANj7qUgzNq4?list=PLQA0AQobpr9hSDAcXgYj14bae40xtiarj
